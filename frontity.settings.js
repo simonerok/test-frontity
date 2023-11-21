@@ -1,57 +1,43 @@
 const settings = {
-  "name": "test-frontity",
-  "state": {
-    "frontity": {
-      "url": "https://test.frontity.org",
-      "title": "Test Frontity Blog",
-      "description": "WordPress installation for Frontity development"
-    }
+  name: "test-frontity",
+  state: {
+    frontity: {
+      url: "https://test.frontity.org",
+      title: "Test Frontity Blog",
+      description: "WordPress installation for Frontity development",
+    },
   },
-  "packages": [
+  packages: [
     {
-      "name": "@frontity/mars-theme",
-      "state": {
-        "theme": {
-          "menu": [
-            [
-              "Home",
-              "/"
-            ],
-            [
-              "Nature",
-              "/category/nature/"
-            ],
-            [
-              "Travel",
-              "/category/travel/"
-            ],
-            [
-              "Japan",
-              "/tag/japan/"
-            ],
-            [
-              "About Us",
-              "/about-us/"
-            ]
+      name: "child-theme-test",
+      /*  name: "@frontity/mars-theme",
+      state: {
+        theme: {
+          menu: [
+            ["Home", "/"],
+            ["Nature", "/landingpage/"],
+            ["Travel", "/booking/"],
+            ["Japan", "/om-os/"],
+            ["About Us", "/about-us/"],
           ],
-          "featured": {
-            "showOnList": false,
-            "showOnPost": false
-          }
-        }
-      }
+          featured: {
+            showOnList: false,
+            showOnPost: false,
+          },
+        },
+      }, */
     },
     {
-      "name": "@frontity/wp-source",
-      "state": {
-        "source": {
-          "url": "https://test.frontity.org"
-        }
-      }
+      name: "@frontity/wp-source",
+      state: {
+        source: {
+          url: "https://lauraskovsted.dk/kea/afsluttende_eksamen",
+        },
+      },
     },
     "@frontity/tiny-router",
-    "@frontity/html2react"
-  ]
+    "@frontity/html2react",
+  ],
 };
 
 export default settings;
