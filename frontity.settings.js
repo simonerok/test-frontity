@@ -10,6 +10,13 @@ const settings = {
   packages: [
     {
       name: "child-theme-test",
+      theme: {
+        menu: [
+          ["Home", "/"],
+          ["Booking", "/booking/"],
+          ["Om os", "/om-os/"],
+        ],
+      },
       /*  name: "@frontity/mars-theme",
       state: {
         theme: {
