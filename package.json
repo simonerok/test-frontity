@@ -23,6 +23,7 @@
     "@frontity/tiny-router": "^1.4.4",
     "@frontity/wp-source": "^1.11.7",
     "child-theme-test": "file:packages/child-theme-test",
+    "dayjs": "^1.11.10",
     "frontity": "^1.17.2"
   }
 }
