@@ -41,11 +41,19 @@ const Root = ({ state }) => {
         {/* get info about current link is a post or page or list using switch statement  
       the when="PROPERTY" is taken from wp as source data*/}
         <Switch>
-          <List when={data.isArchive} />
+          {/* <List when={data.isArchive} /> */}
           <Page when={data.isPage} />
           <Post when={data.isPost} />
         </Switch>
       </Main>
+      <Footer>
+        <h2>Kontakt</h2>
+
+        <Link link="mailto:fodklinik@nythaab.dk">Fodklinik@nythaab.dk</Link>
+        <Link link="tel:86 16 43 93">86 18 43 93</Link>
+
+        <h2>Åbningstider</h2>
+      </Footer>
     </>
   );
 };
@@ -112,4 +120,31 @@ const Menu = styled.nav`
     text-decoration: none;
     
   }
+`;
+const FirstSection = styled.section`
+  max-width: auto;
+  background: rgb(251, 250, 249);
+  background: linear-gradient(
+    0deg,
+    rgba(251, 250, 249, 1) 0%,
+    rgba(170, 186, 193, 1) 50%,
+    rgba(251, 250, 249, 1) 100%
+  );
+`;
+const Footer = styled.footer`
+  background-color: #051a63;
+  color: #fbfaf9;
+  display: grid;
+  grid-template: repeat(2, 1fr);
+  & > a {
+    font-size:40px
+    margin-left: 1em;
+    color: #fbfaf9;
+    text-decoration: none;
+    
+  }
+  @media-query (min-width: 765) {
+    grid-template: repeat(3, 1fr);
+  }
+
 `;
