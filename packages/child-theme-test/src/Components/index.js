@@ -32,7 +32,7 @@ const Root = ({ state }) => {
             <Link link="/behandlinger">Behandlinger</Link>
             <Link link="/booking">Booking</Link>
 
-            <Link link="/om-os">Om os</Link>
+            <Link link="/om-klinikken">Om os</Link>
           </Menu>
         </HeaderContent>
       </Header>
@@ -45,14 +45,21 @@ const Root = ({ state }) => {
           <Page when={data.isPage} />
           <Post when={data.isPost} />
         </Switch>
+
+        {/* actual content */}
       </Main>
       <Footer>
         <h2>Kontakt</h2>
 
         <Link link="mailto:fodklinik@nythaab.dk">Fodklinik@nythaab.dk</Link>
         <Link link="tel:86 16 43 93">86 18 43 93</Link>
+        <Link link="#findos">Ivar Huitfeldtsgade 79, 8200 Århus N</Link>
 
         <h2>Åbningstider</h2>
+        <p>Alle hverdage fra kl. 9:30-15:30</p>
+        {/* { if (window.innerWidth >== 500) {
+          <img></img>
+        }} */}
       </Footer>
     </>
   );
@@ -87,7 +94,7 @@ const Main = styled.main`
     max-width: 100%;
   }
   h1 {
-    font-size: 80px;
+    font-size: 28px;
     & > a {
       font-size:40px
       margin-right: 1em;
@@ -97,14 +104,17 @@ const Main = styled.main`
     }
   }
   h2 {
-    font-size: 55px;
+    font-size: 20px;
     margin: 0.5em 0;
   }
   p {
     font-family: Forum;
-    font-size: 20px;
+    font-size: 12px;
     line-height: 1.25em;
     margin-bottom: 0.75em;
+  }
+  @media-query(min-width: 765) {
+    
   }
 `;
 const Menu = styled.nav`
@@ -121,7 +131,7 @@ const Menu = styled.nav`
     
   }
 `;
-const FirstSection = styled.section`
+const ColoredSection = styled.section`
   max-width: auto;
   background: rgb(251, 250, 249);
   background: linear-gradient(
@@ -135,7 +145,7 @@ const Footer = styled.footer`
   background-color: #051a63;
   color: #fbfaf9;
   display: grid;
-  grid-template: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   & > a {
     font-size:40px
     margin-left: 1em;
